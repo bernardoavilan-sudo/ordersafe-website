@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrderSafe - Anti-Fraud Intelligence Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Portada Principal -->
+    <header class="hero">
+        <div class="container">
+            <h1>🛡️ OrderSafe</h1>
+            <p class="subtitle">The Future of E-Commerce Fraud Prevention</p>
+            <p class="description">
+                Protect your online store from carding, chargebacks, and advanced fraud attacks 
+                using Real-Time AI Analysis. Stop losing money to cybercriminals.
+            </p>
+            <div class="actions">
+                <a href="mailto:contacto@ordersafe.com" class="btn btn-primary">Request a Free Demo</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Características -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose OrderSafe?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>⚡ Real-Time Analysis</h3>
+                    <p>Our AI analyzes transactions in under 2 seconds, giving you instant decisions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 95+ Detection Rules</h3>
+                    <p>We detect advanced attack patterns including VMs, anti-detect browsers, and proxies.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏦 Chargeback Reduction</h3>
+                    <p>We help you approve legitimate customers while blocking fraud, reducing costly chargebacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Demostración -->
+    <section class="demo">
+        <div class="container">
+            <h2>See It In Action</h2>
+            <p>Our API is simple to integrate. Just send us the order data, and we return a risk score and recommendation.</p>
+            <pre class="code-block">
+                <code>
+// Simple API Call Example
+POST https://ordersafe-fraudshield.onrender.com/test/analyze
+{
+  "email": "john.doe@gmail.com",
+  "ip": "104.28.212.10",
+  "amount": 1200,
+  "shipping_country": "US",
+  "billing_country": "RU",
+  "customer_name": "John Doe",
+  "product_category": "electronics",
+  "is_returning": false,
+  "threeds_verified": false,
+  "flags": ["high_risk_ip", "non_vbv"]
+}
+                </code>
+            </pre>
+        </div>
+    </section>
+
+    <!-- Sección de Precios -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="price">$99<span>/month</span></p>
+                    <ul>
+                        <li>500 Transactions/month</li>
+                        <li>Real-Time AI Analysis</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <a href="mailto:contacto@ordersafe.com" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro</h3>
+                    <p class="price">$249<span>/month</span></p>
+                    <ul>
+                        <li>5,000 Transactions/month</li>
+                        <li>Advanced Fraud Rules</li>
+                        <li>Priority Support</li>
+                        <li>Custom Integrations</li>
+                    </ul>
+                    <a href="mailto:contacto@ordersafe.com" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 OrderSafe. All rights reserved.</p>
+            <p>We protect your business from the inside out.</p>
+        </div>
+    </footer>
+</body>
+</html>
