@@ -8,20 +8,31 @@
         body { background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
         .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #111827; border-bottom: 1px solid #2d3748; }
         .logo { font-size: 24px; font-weight: bold; color: #00ffcc; text-decoration: none; }
-        .nav-links a { color: #ffffff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; }
+        .nav-links a { color: #ffffff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; transition: color 0.3s; }
+        .nav-links a:hover { color: #00ffcc; }
         .btn-nav { background-color: #00ffcc; color: #0b0f19; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-left: 25px; text-decoration: none;}
-        .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; display: flex; gap: 50px; }
+        
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; display: flex; gap: 50px; }
         .contact-info { flex: 1; }
-        .contact-form { flex: 1; background: #111827; padding: 30px; border-radius: 8px; border: 1px solid #2d3748; }
-        h1 { color: #00ffcc; font-size: 42px; margin-bottom: 20px; }
-        h2 { color: #ffffff; font-size: 24px; margin-bottom: 20px; }
-        p { color: #a0aec0; font-size: 16px; margin-bottom: 15px; }
-        .info-item { margin-bottom: 25px; }
-        .info-item strong { color: #00ffcc; display: block; margin-bottom: 5px; }
-        .info-item a { color: #ffffff; text-decoration: none; }
-        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: #0b0f19; border: 1px solid #2d3748; color: white; border-radius: 5px; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        button { background: #00ffcc; color: #0b0f19; border: none; padding: 12px 30px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; width: 100%; }
+        .contact-form { flex: 1; background: #111827; padding: 40px; border-radius: 8px; border: 1px solid #2d3748; }
+        
+        h1 { color: #00ffcc; font-size: 42px; margin-bottom: 10px; }
+        h2 { color: #ffffff; font-size: 24px; margin-bottom: 25px; }
+        p { color: #a0aec0; font-size: 16px; margin-bottom: 25px; }
+        
+        .info-block { margin-bottom: 30px; }
+        .info-block strong { color: #00ffcc; display: block; margin-bottom: 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;}
+        .info-block p { color: #ffffff; margin: 0; font-size: 16px; }
+        /* Aquí cambiamos el color azul por turquesa */
+        .info-block a { color: #00ffcc; text-decoration: none; transition: opacity 0.2s; }
+        .info-block a:hover { opacity: 0.8; text-decoration: underline; }
+        
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: #0b0f19; border: 1px solid #2d3748; color: white; border-radius: 5px; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; font-size: 15px;}
+        input:focus, textarea:focus { outline: none; border-color: #00ffcc; }
+        
+        button { background: #00ffcc; color: #0b0f19; border: none; padding: 15px 30px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; width: 100%; transition: background 0.2s;}
         button:hover { background: #00ccaa; }
+        
         .footer { text-align: center; padding: 40px; color: #718096; border-top: 1px solid #2d3748; margin-top: 50px; font-size: 14px; }
     </style>
 </head>
@@ -42,17 +53,17 @@
             <h1>Contact Us</h1>
             <p>Whether you are looking to integrate our API, request a demo, or discuss acquisition, our team is ready to assist you.</p>
             
-            <div class="info-item">
+            <div class="info-block">
                 <strong>Email</strong>
                 <a href="mailto:admin@ordersafeai.com">admin@ordersafeai.com</a>
             </div>
             
-            <div class="info-item">
+            <div class="info-block">
                 <strong>WhatsApp</strong>
-                <a href="https://wa.me/1234567890" target="_blank">+57 (310) 560-3901</a> <!-- Reemplaza con tu número real -->
+                <a href="https://wa.me/573105603901" target="_blank">+57 310 560 3901</a>
             </div>
 
-                        <div class="info-block">
+            <div class="info-block">
                 <strong>Corporate Office (USA)</strong>
                 <p>7815 SW 97 Place.<br>Miami, FL 33173<br>United States</p>
                 <p style="margin-top: 5px;"><a href="tel:+17864723481">+1 (786) 472-3481</a></p>
@@ -61,13 +72,13 @@
             <div class="info-block">
                 <strong>Development Hub (Colombia)</strong>
                 <p>Calle 9 # 1 – 31 E – Villa Mayorga<br>Fusagasugá, Colombia. 252211</p>
-                <p style="margin-top: 5px;"><a href="https://wa.me/573000000000" target="_blank">+57 300 000 0000</a></p> <!-- Reemplaza con tu número real de Colombia -->
+                <p style="margin-top: 5px;"><a href="https://wa.me/573105603901" target="_blank">+57 310 560 3901</a></p>
             </div>
         </div>
 
         <div class="contact-form">
             <h2>Send us a message</h2>
-            <form action="https://formspree.io/f/moeezgbn" method="POST"> <!-- Si usas Formspree, pon tu código aquí -->
+            <form action="https://formspree.io/f/moeezgbn" method="POST">
                 <input type="text" name="name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="Corporate Email" required>
                 <input type="text" name="company" placeholder="Company Name">
