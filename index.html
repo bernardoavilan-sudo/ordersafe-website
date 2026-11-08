@@ -3,85 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrderSafe | Next-Gen Fraud Intelligence API</title>
+    <title>OrderSafe | Next-Gen Fraud Intelligence</title>
     <style>
-        body { background-color: #0b0f19; color: #ffffff; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; }
-        .nav { display: flex; justify-content: space-between; padding: 20px 50px; background-color: #111827; align-items: center; border-bottom: 1px solid #2d3748; font-family: 'Segoe UI', sans-serif; }
-        .nav a { color: #00ffcc; text-decoration: none; margin-left: 20px; font-weight: bold; }
-        .hero { text-align: center; padding: 80px 20px; font-family: 'Segoe UI', sans-serif; }
-        .badge { background-color: #1a2332; color: #00ffcc; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; border: 1px solid #00ffcc; }
-        h1 { font-size: 48px; margin: 20px 0; }
-        .highlight { color: #00ffcc; }
-        p.subtitle { font-size: 18px; color: #a0aec0; max-width: 800px; margin: 0 auto 20px auto; }
-        .cta-btn { background-color: #00ffcc; color: #0b0f19; padding: 15px 40px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; font-family: 'Segoe UI', sans-serif;}
+        body { background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #111827; border-bottom: 1px solid #2d3748; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: bold; color: #00ffcc; text-decoration: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; transition: color 0.3s; }
+        .nav-links a:hover { color: #00ffcc; }
+        .btn-nav { background-color: #00ffcc; color: #0b0f19; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-left: 25px; text-decoration: none;}
         
-        .tech-section { max-width: 1000px; margin: 40px auto; padding: 20px; }
-        .tech-section h2 { color: #00ffcc; border-bottom: 1px solid #2d3748; padding-bottom: 10px; font-family: 'Segoe UI', sans-serif;}
-        .code-block { background-color: #111827; padding: 20px; border-radius: 8px; border: 1px solid #2d3748; overflow-x: auto; color: #e2e8f0; font-size: 14px; }
-        .rule-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; font-family: 'Segoe UI', sans-serif;}
-        .rule-item { background: #111827; padding: 15px; border-left: 4px solid #00ffcc; border-radius: 4px; font-size: 14px;}
-        .rule-item span { color: #00ffcc; font-weight: bold; }
-        .footer { text-align: center; padding: 40px; color: #718096; border-top: 1px solid #2d3748; margin-top: 50px; font-family: 'Segoe UI', sans-serif;}
+        .hero { text-align: center; padding: 120px 20px; }
+        .badge { background-color: #1a2332; color: #00ffcc; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; border: 1px solid #00ffcc; display: inline-block; margin-bottom: 20px;}
+        h1 { font-size: 56px; margin: 0 0 20px 0; letter-spacing: -1px; }
+        .highlight { color: #00ffcc; }
+        p.subtitle { font-size: 20px; color: #a0aec0; max-width: 800px; margin: 0 auto 40px auto; }
+        .cta-btn { background-color: #00ffcc; color: #0b0f19; padding: 15px 40px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; transition: transform 0.2s; display: inline-block;}
+        .cta-btn:hover { transform: scale(1.05); }
+        
+        .features-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 30px; padding: 50px 20px; }
+        .feature-card { background-color: #111827; padding: 40px; border-radius: 10px; border: 1px solid #2d3748; flex: 1; text-align: left; }
+        .feature-card h3 { color: #00ffcc; font-size: 22px; margin-top: 0; }
+        
+        .footer { text-align: center; padding: 40px; color: #718096; border-top: 1px solid #2d3748; margin-top: 50px; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div style="font-size: 24px; font-weight: bold; color: #00ffcc;">🛡️ OrderSafe API</div>
-        <div>
-            <a href="index.html">Overview</a>
-            <a href="about.html">Architecture</a>
-            <a href="mailto:ventas@ordersafeai.com" class="cta-btn" style="padding: 10px 20px; font-size: 14px; color: #0b0f19;">Acquisition Inquiry</a>
+    <div class="header">
+        <a href="index.html" class="logo">🛡️ OrderSafe</a>
+        <div class="nav-links">
+            <a href="index.html" style="color: #00ffcc;">Home</a>
+            <a href="overview.html">Overview</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="btn-nav">Contact Us</a>
         </div>
     </div>
 
     <div class="hero">
-        <div class="badge">ENTERPRISE FRAUD API - READY FOR ACQUISITION</div>
-        <h1>Offensive Intelligence Engine <span class="highlight">as an API.</span></h1>
-        <p class="subtitle">OrderSafe is a proprietary 110+ rule AI engine designed to detect anti-detect browsers, Virtual Machines, and Non-VBV carding attacks. Built in Python (Flask) and ready to be integrated into large-scale payment gateways.</p>
+        <div class="badge">ENTERPRISE GRADE ANTI-FRAUD</div>
+        <h1>Stop Fraud Before It <span class="highlight">Happens.</span></h1>
+        <p class="subtitle">OrderSafe is a proprietary 110+ rule AI engine designed to detect anti-detect browsers, Virtual Machines, and Non-VBV carding attacks in real-time.</p>
+        <a href="overview.html" class="cta-btn">Explore the Technology</a>
     </div>
 
-    <div class="tech-section">
-        <h2>// API Integration (POST Request)</h2>
-        <div class="code-block">
-<pre>
-curl -X POST https://ordersafe-fraudshield.onrender.com/test/analyze \
--H "Content-Type: application/json" \
--H "Authorization: Bearer [API_KEY]" \
--d '{
-  "email": "test@mailinator.com",
-  "ip": "104.28.212.10",
-  "amount": 1200,
-  "shipping_country": "US",
-  "billing_country": "RU",
-  "threeds_verified": false
-}'
-
-// Response:
-{
-  "score": 10.0,
-  "level": "critical",
-  "action": "block",
-  "rules_triggered": ["R24", "R42", "R80"],
-  "explanation": "Non-VBV attack detected. Datacenter IP (R42) and Geo non-convergence (R36)."
-}
-</pre>
+    <div class="features-container">
+        <div class="feature-card">
+            <h3>⚡ Real-Time Analysis</h3>
+            <p>Our API analyzes transactions in under 3 seconds, returning a clear JSON response with the risk score and actionable recommendation.</p>
         </div>
-    </div>
-
-    <div class="tech-section">
-        <h2>// Core Detection Vectors</h2>
-        <div class="rule-list">
-            <div class="rule-item"><span>R92/R93:</span> Virtual Machine & Anti-Detect Browser Fingerprinting</div>
-            <div class="rule-item"><span>R80:</span> Non-VBV (3D Secure bypass) Attack Patterns</div>
-            <div class="rule-item"><span>R60:</span> Automated BIN Scanning Detection</div>
-            <div class="rule-item"><span>R42/R96:</span> Datacenter Proxies & Residential Proxy Reuse</div>
-            <div class="rule-item"><span>R62-R65:</span> Airline Ticket Triangulation & IATA Spoofing</div>
-            <div class="rule-item"><span>R110:</span> Friendly Fraud (Chargeback Abuse) Patterns</div>
+        <div class="feature-card">
+            <h3>🔍 110+ Offensive Rules</h3>
+            <p>We don't rely on generic data. Our rules are built on deep-dark-web intelligence to detect proxies, VMs, and Non-VBV BINs.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🔒 Explainable AI (XAI)</h3>
+            <p>We don't just say "fraud". We tell you exactly which rules triggered the alert (e.g., R80, R42, R24), giving you full context.</p>
         </div>
     </div>
 
     <div class="footer">
-        &copy; 2026 OrderSafe. All rights reserved. | Proprietary AI Infrastructure | ordersafeai.com
+        &copy; 2026 OrderSafe. All rights reserved. | Built for Enterprise Integration.
     </div>
 </body>
 </html>

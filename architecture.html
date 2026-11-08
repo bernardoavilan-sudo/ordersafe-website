@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrderSafe | Architecture</title>
     <style>
-        body { background-color: #0b0f19; color: #ffffff; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; line-height: 1.6; }
-        .nav { display: flex; justify-content: space-between; padding: 20px 50px; background-color: #111827; align-items: center; border-bottom: 1px solid #2d3748; font-family: 'Segoe UI', sans-serif; }
-        .nav a { color: #00ffcc; text-decoration: none; margin-left: 20px; font-weight: bold; }
-        .container { max-width: 900px; margin: 50px auto; padding: 20px; }
-        h1 { color: #00ffcc; font-family: 'Segoe UI', sans-serif; }
-        h2 { color: #ffffff; border-bottom: 1px solid #2d3748; padding-bottom: 10px; margin-top: 40px; font-family: 'Segoe UI', sans-serif;}
-        p, li { color: #a0aec0; font-size: 16px; }
-        .code-block { background-color: #111827; padding: 20px; border-radius: 8px; border: 1px solid #2d3748; color: #00ffcc; }
+        body { background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #111827; border-bottom: 1px solid #2d3748; }
+        .logo { font-size: 24px; font-weight: bold; color: #00ffcc; text-decoration: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; }
+        .btn-nav { background-color: #00ffcc; color: #0b0f19; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-left: 25px; text-decoration: none;}
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+        h1 { color: #00ffcc; font-size: 42px; }
+        h2 { color: #ffffff; border-bottom: 1px solid #2d3748; padding-bottom: 10px; margin-top: 40px; }
+        p { color: #a0aec0; font-size: 17px; }
+        .code-block { background-color: #111827; padding: 20px; border-radius: 8px; border: 1px solid #2d3748; color: #00ffcc; font-family: 'Courier New', Courier, monospace; font-size: 14px; }
+        .footer { text-align: center; padding: 40px; color: #718096; border-top: 1px solid #2d3748; margin-top: 50px; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div style="font-size: 24px; font-weight: bold; color: #00ffcc;">🛡️ OrderSafe API</div>
-        <div>
-            <a href="index.html">Overview</a>
-            <a href="architecture.html">Architecture</a>
-            <a href="mailto:admin@ordersafeai.com" style="color: #0b0f19; background: #00ffcc; padding: 10px 20px; border-radius: 5px;">Acquisition Inquiry</a>
+    <div class="header">
+        <a href="index.html" class="logo">🛡️ OrderSafe</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="overview.html">Overview</a>
+            <a href="architecture.html" style="color: #00ffcc;">Architecture</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="btn-nav">Contact Us</a>
         </div>
     </div>
 
@@ -29,26 +34,31 @@
         <h1>System Architecture</h1>
         <p>OrderSafe is built for high availability, low latency, and deep offensive intelligence. The system is deployed as a microservice API ready to be integrated into any payment gateway.</p>
 
-        <h2>// Tech Stack</h2>
-        <ul>
+        <h2>Tech Stack</h2>
+        <ul style="color: #a0aec0; font-size: 17px;">
             <li><strong>Backend Engine:</strong> Python (Flask)</li>
-            <li><strong>AI Inference:</strong> Groq Cloud (LLaMA 3 models)</li>
+            <li><strong>AI Inference:</strong> Groq Cloud (LLaMA 3 70B/8B - High-speed latency)</li>
             <li><strong>Database:</strong> PostgreSQL (Neon.tech) for persistent event logging</li>
-            <li><strong>Hosting:</strong> Render / Vercel (Global Edge Network)</li>
+            <li><strong>Hosting:</strong> Render (Backend) / Vercel (Frontend)</li>
         </ul>
 
-        <h2>// Offensive Engine Rules (110+)</h2>
-        <p>The detection engine doesn't just check static data; it correlates signals based on real dark-web intelligence (Carding Forums, Non-VBV lists).</p>
+        <h2>API Payload Example</h2>
         <div class="code-block">
-R92, R93 -> Anti-Detect Browser Fingerprinting (AdsPower, Dolphin)<br>
-R80, R81 -> Non-VBV Attacks (No 3DS + High Amount + Datacenter IP)<br>
-R96     -> Residential Proxy Reuse (Webshare, etc.)<br>
-R62-R65 -> Airline Fraud & IATA Spoofing<br>
-R110    -> First-Party Fraud (Chargeback Abuse)
+POST /test/analyze<br>
+{<br>
+&nbsp;&nbsp;"email": "test@mailinator.com",<br>
+&nbsp;&nbsp;"ip": "104.28.212.10",<br>
+&nbsp;&nbsp;"amount": 1200,<br>
+&nbsp;&nbsp;"shipping_country": "US",<br>
+&nbsp;&nbsp;"billing_country": "RU",<br>
+&nbsp;&nbsp;"threeds_verified": false<br>
+}
         </div>
+        <p style="margin-top: 20px;">The engine returns a JSON response with the score, level, action, and an explainable AI (XAI) reasoning field.</p>
+    </div>
 
-        <h2>// Scalability & Security</h2>
-        <p>The API is stateless, allowing horizontal scaling. Webhooks are cryptographically signed (Stripe Signature Verification) to prevent injection attacks. API endpoints are protected by Bearer Tokens and Basic Auth for dashboards.</p>
+    <div class="footer">
+        &copy; 2026 OrderSafe. All rights reserved.
     </div>
 </body>
 </html>

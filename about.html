@@ -2,21 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About OrderSafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrderSafe | About Us</title>
     <style>
-        body { background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', sans-serif; padding: 50px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-        h1 { color: #00ffcc; }
-        .content { background: #111827; padding: 40px; border-radius: 10px; border: 1px solid #2d3748; margin-top: 30px; }
+        body { background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #111827; border-bottom: 1px solid #2d3748; }
+        .logo { font-size: 24px; font-weight: bold; color: #00ffcc; text-decoration: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; }
+        .btn-nav { background-color: #00ffcc; color: #0b0f19; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-left: 25px; text-decoration: none;}
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+        h1 { color: #00ffcc; font-size: 42px; }
+        p { color: #a0aec0; font-size: 18px; margin-bottom: 20px; }
+        .highlight-box { background: #111827; border-left: 4px solid #00ffcc; padding: 20px; margin: 30px 0; border-radius: 4px; }
+        .footer { text-align: center; padding: 40px; color: #718096; border-top: 1px solid #2d3748; margin-top: 50px; font-size: 14px; }
     </style>
 </head>
 <body>
-    <h1>About OrderSafe</h1>
-    <div class="content">
-        <p>OrderSafe was born from a simple observation: traditional fraud prevention tools are blind to modern cybercriminal techniques.</p>
-        <p>While payment processors only look at the surface of a transaction, we use a 110-rule offensive intelligence engine to detect advanced threats like anti-detect browsers, non-VBV cards, and account takeovers.</p>
-        <p>Our mission is to democratize enterprise-grade security for SMBs and platforms worldwide.</p>
+    <div class="header">
+        <a href="index.html" class="logo">🛡️ OrderSafe</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="overview.html">Overview</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="about.html" style="color: #00ffcc;">About</a>
+            <a href="contact.html" class="btn-nav">Contact Us</a>
+        </div>
     </div>
-    <br>
-    <a href="index.html" style="color: #00ffcc; text-decoration: none;">← Back to Home</a>
+
+    <div class="container">
+        <h1>About OrderSafe</h1>
+        <p>OrderSafe was founded on a simple but critical observation: <strong>legacy fraud prevention tools are fundamentally blind to the modern cybercriminal playbook.</strong></p>
+        
+        <p>While major payment processors focus their resources on surface-level checks (like AVS and basic IP blacklists), organized carding rings have evolved. They now use sophisticated infrastructure like Virtual Machines, Anti-Detect browsers, and residential proxy networks to bypass traditional defenses.</p>
+
+        <div class="highlight-box">
+            <p style="margin: 0; color: #00ffcc; font-weight: bold;">"We don't just look at the transaction. We look at the attacker's environment."</p>
+        </div>
+
+        <p>Our team combines expertise in offensive cybersecurity, AI engineering, and payment risk. We built the FraudShield Engine by monitoring deep-dark-web forums, analyzing Non-VBV lists, and reverse-engineering the techniques used by professional carders.</p>
+
+        <p>Today, OrderSafe provides a robust, explainable, and API-first solution designed to be seamlessly integrated into payment gateways and large-scale e-commerce platforms. Our mission is to democratize enterprise-grade security and stop fraud before it happens.</p>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 OrderSafe. All rights reserved.
+    </div>
 </body>
 </html>
